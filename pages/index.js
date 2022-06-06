@@ -2,10 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+import { initiateCheckout } from "../lib/payment.js";
+
 import products from "../products.json";
 
 export default function Home() {
-  console.log(products);
   return (
     <div className={styles.container}>
       <Head>
@@ -29,6 +30,21 @@ export default function Home() {
                   <h2>{title}</h2>
                   <p>${price}</p>
                   <p>{description}</p>
+                  <button
+                    onClick={() => {
+                      initiateCheckout({
+                        lineItems: [
+                          {
+                            price: id,
+                            quantity: 1,
+                          },
+                        ],
+                      });
+                    }}
+                    className={styles.button}
+                  >
+                    Buy Now!
+                  </button>
                 </a>
               </li>
             );
