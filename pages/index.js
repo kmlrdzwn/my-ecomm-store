@@ -1,13 +1,13 @@
 import Head from "next/head";
-import { FaShoppingCart } from "react-icons/fa";
 import styles from "../styles/Home.module.css";
+import { FaShoppingCart } from "react-icons/fa";
 
-import useCart from "../hooks/use-cart.js";
+import { useCart } from "../hooks/use-cart.js";
 
 import products from "../products.json";
 
 export default function Home() {
-  const { subtotal, quantity, addToCart, checkout } = useCart();
+  const { addToCart, subtotal, quantity, checkout } = useCart();
 
   return (
     <div className={styles.container}>
@@ -26,7 +26,7 @@ export default function Home() {
             <strong>Items:</strong> {quantity}
           </li>
           <li>
-            <strong>Total:</strong> ${subtotal}
+            <strong>Total:</strong> ${subtotal}.00
           </li>
           <li>
             <button className={`${styles.button} ${styles.cartButton}`} onClick={checkout}>
@@ -47,7 +47,13 @@ export default function Home() {
                   <p>${price}</p>
                   <p>{description}</p>
                   <p>
-                    <button className={styles.button} onClick={() => addToCart({ id })}>
+                    <button
+                      className={styles.button}
+                      onClick={(e) => {
+                        e.preventDefault;
+                        addToCart({ id });
+                      }}
+                    >
                       Buy
                     </button>
                   </p>
