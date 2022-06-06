@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { initiateCheckout } from "../lib/payments.js";
+
 import products from "../products.json";
 
 const defaultCart = {
@@ -42,10 +44,22 @@ export default function useCart() {
     });
   }
 
+  function checkout() {
+    initiateCheckout({
+      lineItems: cartItems.map(({ id, quantity }) => {
+        return {
+          price: id,
+          quantity,
+        };
+      }),
+    });
+  }
+
   return {
     cart,
     subtotal,
     quantity,
     addToCart,
+    checkout,
   };
 }

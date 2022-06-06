@@ -2,25 +2,12 @@ import Head from "next/head";
 import { FaShoppingCart } from "react-icons/fa";
 import styles from "../styles/Home.module.css";
 
-import { initiateCheckout } from "../lib/payments.js";
-
 import useCart from "../hooks/use-cart.js";
 
 import products from "../products.json";
 
 export default function Home() {
-  const { subtotal, quantity, addToCart } = useCart();
-
-  function checkout() {
-    initiateCheckout({
-      lineItems: cartItems.map(({ id, quantity }) => {
-        return {
-          price: id,
-          quantity,
-        };
-      }),
-    });
-  }
+  const { subtotal, quantity, addToCart, checkout } = useCart();
 
   return (
     <div className={styles.container}>
