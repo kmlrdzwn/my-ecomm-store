@@ -1,7 +1,5 @@
 import { useState, createContext, useContext, useEffect } from "react";
-
 import { initiateCheckout } from "../lib/payments.js";
-
 import products from "../products.json";
 
 const defaultCart = {
