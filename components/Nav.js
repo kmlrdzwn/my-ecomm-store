@@ -10,12 +10,12 @@ const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/">
-        <a className={styles.navTitle}>Space Jelly Shop</a>
+        <a className={styles.navTitle}>Stickers Store</a>
       </Link>
       <p className={styles.navCart}>
         <Link href="/cart">
           <a>
-            <FaShoppingCart /> ${subtotal.toFixed(2)}
+            <FaShoppingCart /> RM {subtotal.toFixed(2)}
           </a>
         </Link>
       </p>

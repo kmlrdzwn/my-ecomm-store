@@ -1,23 +1,23 @@
 [
   {
-    "id": "price_1L7Z0mB2QrGb4XzZcIWQCfEG",
-    "title": "Space Jelly Tshirt",
-    "description": "Bring Cosmo the space Jellyfish to your wardrobe with this high quality tshirt.",
-    "image": "/images/spacejelly-tshirt.jpeg",
-    "price": 10.0
-  },
-  {
-    "id": "price_1L7Z2bB2QrGb4XzZj2udCBAX",
-    "title": "Space Jelly Stickers",
-    "description": "Add some flare to your laptop with a sticker of Cosmo the Space Jellyfish.",
-    "image": "/images/spacejelly-stickers.jpeg",
+    "id": "price_1L8O4zB2QrGb4XzZ26P4Z6DL",
+    "title": "All Might",
+    "description": "Toshinori Yagi, aka All Might, is considered the #1 hero in the world.",
+    "image": "/images/all-might.webp",
     "price": 5.0
   },
   {
-    "id": "price_1L7Z3KB2QrGb4XzZBbZPSWUw",
-    "title": "Space Jelly Combo",
-    "description": "Show your love for Cosmo with a tshirt and sticker combo pack!",
-    "image": "/images/spacejelly-combo.jpeg",
-    "price": 13.0
+    "id": "price_1L8O6fB2QrGb4XzZ579jnzds",
+    "title": "Bear Boxer",
+    "description": "Don't mess around with this teddy, even Manny Pacquiao is afraid of Teddy.",
+    "image": "/images/bear-boxer.webp",
+    "price": 5.0
+  },
+  {
+    "id": "price_1L8O7JB2QrGb4XzZVLbJGruA",
+    "title": "DeadTrooper",
+    "description": "Deadtrooper, the fallen mutant with the power of a Jedi.",
+    "image": "/images/deadtrooper.webp",
+    "price": 5.0
   }
 ]

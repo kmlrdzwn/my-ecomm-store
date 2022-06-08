@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import { FaShoppingCart } from "react-icons/fa";
 
@@ -13,21 +14,21 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Stickers Store | Next.js </title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Space Jelly Shop</h1>
+        <h1 className={styles.title}>Stickers Store</h1>
 
-        <p className={styles.description}>The best space jellyfish swag on the web!</p>
+        <p className={styles.description}>The best sticker swag on the web!</p>
 
         <ul className={styles.cart}>
           <li>
             <strong>Items:</strong> {quantity}
           </li>
           <li>
-            <strong>Total:</strong> ${subtotal}.00
+            <strong>Total:</strong> RM{subtotal}.00
           </li>
           <li>
             <button className={`${styles.button} ${styles.cartButton}`} onClick={checkout}>
@@ -44,9 +45,9 @@ export default function Home() {
               <li key={id} className={styles.card}>
                 <Link href={`/products/${id}`}>
                   <a>
-                    <img src={image} alt={title} />
+                    <Image width={250} height={250} src={image} alt={title} />
                     <h3>{title}</h3>
-                    <p>${price}</p>
+                    <p>RM {price}.00</p>
                     <p>{description}</p>
                     <p>
                       <button
@@ -68,9 +69,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <p>Made with ❤️ by Kamal Redzwan </p>
       </footer>
     </div>
   );
