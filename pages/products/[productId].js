@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styles from "../../styles/Product.module.css";
-
+import Image from "next/image";
 import { useCart } from "../../hooks/use-cart";
 
 import products from "../../products.json";
@@ -19,7 +19,7 @@ export default function Product({ product }) {
 
       <main className={styles.main}>
         <div className={styles.productImage}>
-          <img src={image} alt={title} />
+          <Image width={250} height={250} src={image} alt={title} />
         </div>
 
         <div>
@@ -45,9 +45,7 @@ export default function Product({ product }) {
       </main>
 
       <footer className={styles.footer}>
-        <a href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app" target="_blank" rel="noopener noreferrer">
-          Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        <p>Made with ❤️ by Kamal Redzwan </p>
       </footer>
     </div>
   );
